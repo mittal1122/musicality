@@ -1,0 +1,82 @@
+Summary
+Create a web app that allows users to create and add songs playlist
+ and add songs to them (for example, the "Best of Arijit" list might have Tum hi ho, Raabta, Har kisi ko)
+
+Requirements
+Create a form that allows users to create a new song playlist
+List should have name
+Create a view that allows the user to see all of their song playlists
+It should display the name of list and number of songs for each list
+Clicking a list will take the user to the list view
+Create a view that allows user to view a song playlist
+This view should display the name of the list and all the songs in the list
+This view should display relevant song information (title, movie name, year of release, singers etc) for each song in the list
+The user should be able to add or remove a song from the list
+Create a view that allows user to add songs to the list
+This view should allow user to add new song to the list
+also use validations at appropriate places
+
+
+
+
+
+create playlist and add songs 			playlist --> songs
+
+Create a form -->  to create a new playlist --> List should have name
+
+Create a view --> to see all of their playlists --> display name of list and number of songs
+
+Clicking a list --> songs list view --> Create a view --> to view a songs list -->  display the name of the playlist
+
+This view should display relevant song information --> title, 
+												movie name, 
+												year of release, 
+												singers etc...	 for each song in the list
+songs list --> add or remove a song from the list  --> Create a view --> to add songs to the list
+
+also use validations at appropriate places
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-4">
+
+        <a routerLink="/addSong" style=" width:100px; background:#e2e2e2"  class="btn btn-outline-primary">Add Song</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <table class="table ">
+            <tr>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let p of songs">
+                <td>{{p.title}}</td>
+                <!-- <td><button  class="btn btn-outline-success" (mouseover)="viewSong(p._id)" (click)="songDetails(songs)" data-toggle="tooltip" data-placement="bottom" title="Songs : {{songCount}}" style=" width:100px; background:#e2e2e2" >Songs</button>
+                   &nbsp; <a routerLink="/playlist/songs" class="btn btn-outline-primary" >Add Song</a>
+                   &nbsp; <button  class="btn btn-outline-danger" (click)="deletePlaylist(p._id)">Delete</button>
+                   &nbsp; </td> -->
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+
+
